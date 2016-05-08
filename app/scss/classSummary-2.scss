@@ -1,0 +1,193 @@
+@charset "UTF-8";
+@import "variable";
+@import "reset";
+
+header .h-icon{
+	width:(26rem/12);
+	height:100%;
+	position:absolute;
+	top:0;
+	z-index: 9;
+}
+header span{
+	color:#fff;
+	font-size:(18rem/12);
+	font-weight: bold;
+	text-align:center;
+}
+header .l-icon{
+	left: (10rem/12);
+	background: url(../images/left.png) center center no-repeat;
+	background-size: (26rem/12);
+}
+header .r-icon{
+	right: (10rem/12);
+	background: url(../images/share.png) center center no-repeat;
+	background-size: (26rem/12);
+}
+
+
+table {  
+    border: 2px solid $blueB;  
+    padding:0;   
+    margin:0 auto;  
+}  
+  
+td,th {  
+    border: 1px solid $blueB; 
+    padding:(8rem/12);
+    text-align: center;	 
+    line-height: (20rem/12);
+    background: #fff;  
+} 
+
+section{
+	background:#fff;
+	margin-bottom:(10rem/12);
+}
+.sec-main{
+	padding:(10rem/12);
+}
+
+.sec-bandage{
+    .sec-tit{
+        text-align: center;
+        margin: 14px 0 8px;
+        .tit-box{
+            display: inline-block;
+            position: relative;
+            width:428/640*100%;
+            text-align: center;
+            padding:2px;
+            background: #fff;
+        }
+        .tit-txt{       
+            width:100%;
+            height: (34rem/12);
+            line-height: (34rem/12);
+            text-align: center;
+            font-size: (14rem/12);
+            color:#fff;
+            background: #33a6e1;
+            border:2px solid #fff;
+        }
+        .tit-r{
+            position: absolute;
+            right:-(23rem/12);
+            /*margin-right: 0;*/
+            top:(8rem/12);
+            z-index: 9;
+            width:(40rem/12);
+            height: (34rem/12);
+            background: url(../images/bandage.png) no-repeat;
+            background-size: (40rem/12) (34rem/12);
+        }
+        .tit-l{
+            position: absolute;
+            left:-(23rem/12);
+            /*margin-right: 0;*/
+            top:(8rem/12);
+            z-index: 9;
+            width:(40rem/12);
+            height: (34rem/12);
+            background: url(../images/bandage.png) no-repeat;
+            background-size: (40rem/12) (34rem/12);
+            transform:rotateY(180deg);
+        }
+    }
+	i{
+		width:(20rem/12);
+		height: (20rem/12);
+		border-radius: 50%;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right:(6rem/12);
+	}
+	.i-teacher{
+		background: url(../images/i-person.png) #84d8fe center center no-repeat;
+		background-size: (14rem/12) ;
+	}
+	.i-classDate{
+        background: url(../images/i-classTime.png) #c2e96e center center no-repeat;
+        background-size: (14rem/12) ;
+    }
+    .i-duration{
+        background: url(../images/i-clock.png) #fdbf57 center center no-repeat;
+        background-size: (14rem/12) ;
+    }
+    .i-timeRange{
+        background: url(../images/i-sandglass.png) #ff9494 center center no-repeat;
+        background-size: (14rem/12) ;
+    }
+    td:first-child{
+        font-weight: bold;
+    }
+}
+.sec-common{
+    .sec-tit{
+        border-bottom:1px solid #f4f4f4;
+        padding:(10rem/12) 0;
+        
+    }
+    
+    .tit-main{
+        height: (14rem/12);
+        font-size: (14rem/12);
+        color:$colH;
+        border-left:2px solid $blue;
+        padding-left:1rem;  
+    }
+    
+}
+
+table{
+    margin-bottom:(10rem/12);
+    &:last-child{
+        margin-bottom:0;
+    }
+}
+.footernote{
+    line-height: 1.5;
+}
+
+.td-half{
+    width:50%;
+}
+.input-item{
+    width:9em;
+    input::-webkit-input-placeholder{
+        color:$blue;
+    }
+
+    .ratio-input{
+        background: url(../images/i-pencil.png) 0 center no-repeat;
+        padding-left:(16rem/12);
+        border:0;
+        color:$blue;
+        height:(14rem/12);
+        width:7.5em;
+        background-size: (14rem/12) ;
+    }
+}
+.color{
+    color:$col;
+}
+
+.wd-5-5{
+    width:5.5em !important;
+}
+
+textarea{
+    width:100%;
+    height: (120rem/12);
+    border:1px solid #d7d7d7;
+}
+
+.btn-box{
+    margin:(10rem/12);
+    text-align: center;
+    color:#fff;
+    background: $blue;
+    border-radius: (3rem/12);
+    line-height: (32rem/12);
+}
