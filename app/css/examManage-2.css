@@ -41,7 +41,7 @@ table { width: 100%; border-collapse: collapse; border-spacing: 0; }
 /*HTML5 reset*/
 header, footer, section, aside, details, menu, article, section, nav, address, hgroup, figure, figcaption, legend { display: block; margin: 0; padding: 0; }
 
-.clearfix:after, .chart-item:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix:after, .chart-item:after, .sec-form:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 .fr { float: right; }
 
@@ -55,11 +55,6 @@ header, footer, section, aside, details, menu, article, section, nav, address, h
 
 header { position: relative; height: 3.8333rem; line-height: 3.8333rem; color: #fff; font-size: 1.5rem; font-weight: bold; text-align: center; background: #15b5ff; }
 
-/*textarea*/
-.input-item { width: 9em; }
-.input-item input::-webkit-input-placeholder { color: #15b5ff; }
-.input-item .ratio-input { background: url(../images/i-pencil.png) 0 center no-repeat; padding-left: 1.3333rem; border: 0; color: #15b5ff; height: 1.1667rem; width: 7.5em; background-size: 1.1667rem; }
-
 /*header*/
 header .h-icon { width: 2.1667rem; height: 100%; position: absolute; top: 0; z-index: 9; }
 
@@ -68,6 +63,15 @@ header span { color: #fff; font-size: 1.5rem; font-weight: bold; text-align: cen
 header .l-icon { left: 0.8333rem; background: url(../images/left.png) center center no-repeat; background-size: 2.1667rem; }
 
 header .r-icon { right: 0.8333rem; background: url(../images/share.png) center center no-repeat; background-size: 2.1667rem; }
+
+/*section bandage*/
+.sec-bandage .sec-tit { text-align: center; margin: 1.1667rem 0 1.6667rem; }
+.sec-bandage .sec-tit .tit-box { display: inline-block; position: relative; width: 66.875%; text-align: center; padding: 2px; background: #fff; }
+.sec-bandage .sec-tit .tit-txt { width: 100%; height: 2.8333rem; line-height: 2.8333rem; text-align: center; font-size: 1.1667rem; color: #fff; background: #33a6e1; border: 2px solid #fff; }
+.sec-bandage .sec-tit .tit-r { position: absolute; right: -1.9167rem; /*margin-right: 0;*/ top: 0.6667rem; z-index: 9; width: 3.3333rem; height: 2.8333rem; background: url(../images/bandage.png) no-repeat; background-size: 3.3333rem 2.8333rem; }
+.sec-bandage .sec-tit .tit-l { position: absolute; left: -1.9167rem; /*margin-right: 0;*/ top: 0.6667rem; z-index: 9; width: 3.3333rem; height: 2.8333rem; background: url(../images/bandage.png) no-repeat; background-size: 3.3333rem 2.8333rem; transform: rotateY(180deg); }
+
+.sec-bandage td:first-child { font-weight: bold; }
 
 /*table common*/
 table { border: 2px solid #aae4fe; padding: 0; margin: 0 auto; }
@@ -81,19 +85,6 @@ section { background: #fff; margin-bottom: 0.8333rem; }
 
 .sec-common .sec-tit { border-bottom: 1px solid #f4f4f4; padding: 0.8333rem 0; margin-bottom: 0.8333rem; }
 .sec-common .tit-main { height: 1.1667rem; font-size: 1.1667rem; color: #252525; border-left: 2px solid #15b5ff; padding-left: 1rem; }
-
-/*section bandage*/
-.sec-bandage .sec-tit { text-align: center; margin: 1.1667rem 0 1.5rem; }
-.sec-bandage .sec-tit .tit-box { display: inline-block; position: relative; width: 66.875%; text-align: center; padding: 2px; background: #fff; }
-.sec-bandage .sec-tit .tit-txt { width: 100%; height: 2.8333rem; line-height: 2.8333rem; text-align: center; font-size: 1.1667rem; color: #fff; background: #33a6e1; border: 2px solid #fff; }
-.sec-bandage .sec-tit .tit-r { position: absolute; right: -1.9167rem; /*margin-right: 0;*/ top: 0.6667rem; z-index: 9; width: 3.3333rem; height: 2.8333rem; background: url(../images/bandage.png) no-repeat; background-size: 3.3333rem 2.8333rem; }
-.sec-bandage .sec-tit .tit-l { position: absolute; left: -1.9167rem; /*margin-right: 0;*/ top: 0.6667rem; z-index: 9; width: 3.3333rem; height: 2.8333rem; background: url(../images/bandage.png) no-repeat; background-size: 3.3333rem 2.8333rem; transform: rotateY(180deg); }
-.sec-bandage i { width: 1.6667rem; height: 1.6667rem; border-radius: 50%; display: inline-block; vertical-align: middle; margin-right: 0.5rem; }
-.sec-bandage .i-teacher { background: url(../images/i-person.png) #84d8fe center center no-repeat; background-size: 1.1667rem; }
-.sec-bandage .i-classDate { background: url(../images/i-classTime.png) #c2e96e center center no-repeat; background-size: 1.1667rem; }
-.sec-bandage .i-duration { background: url(../images/i-clock.png) #fdbf57 center center no-repeat; background-size: 1.1667rem; }
-.sec-bandage .i-timeRange { background: url(../images/i-sandglass.png) #ff9494 center center no-repeat; background-size: 1.1667rem; }
-.sec-bandage td:first-child { font-weight: bold; }
 
 table { margin-bottom: 0.8333rem; }
 table:last-child { margin-bottom: 0; }
@@ -127,8 +118,6 @@ table:last-child { margin-bottom: 0; }
 .charts .charts-tit { padding-top: 0.3333rem; color: #252525; text-align: center; line-height: 1.4; }
 .charts .charts-main { padding: 1rem 0; border-bottom: 1px dashed #d7d7d7; }
 
-#charts-pic { width: 100%; height: 9.1667rem; }
-
 #charts-ans { width: 100%; height: 9.8333rem; }
 
 #charts-desertion { width: 100%; height: 9.1667rem; }
@@ -136,7 +125,7 @@ table:last-child { margin-bottom: 0; }
 
 #charts-knowledge, #charts-preparation, #charts-teaching-difficuty, #charts-teaching-idea { width: 100%; height: 16.6667rem; }
 
-#charts-homework, #charts-homework-score { width: 100%; height: 9.1667rem; }
+#charts-pic, #charts-homework, #charts-homework-score { width: 100%; height: 9.1667rem; }
 
 .chart-item { line-height: 2rem; font-size: 0.8333rem; color: #252525; }
 .chart-item .item-a { float: left; border-radius: 50%; width: 2rem; height: 2rem; vertical-align: bottom; transform: scale(0.6); }
@@ -160,3 +149,16 @@ table:last-child { margin-bottom: 0; }
 .darkBlue { color: #38586d; }
 
 .sec-txt { text-indent: 2em; padding: .4em; font-size: 1rem; line-height: 1.6667rem; }
+
+/*input collection*/
+.sec-form { border-top: 1px solid #f4f4f4; border-bottom: 1px solid #f4f4f4; padding: 1.1667rem 0.8333rem; }
+.sec-form .input-comb { float: left; margin-right: 4%; width: 47.99%; }
+.sec-form .input-comb:nth-child(even) { margin-right: 0; }
+.sec-form .input-comb input { margin-bottom: 0.8333rem; padding: 0 0.3333rem; border: 1px solid #7d7d7d; width: 100%; height: 2.5rem; background: #f8f8f8; }
+.sec-form label { display: block; padding-left: 0.3333rem; font-size: 1rem; line-height: 1; height: 1rem; margin-bottom: 0.5rem; }
+.sec-form .input-box { position: relative; }
+.sec-form .input-box .i-school { right: 0 !important; width: 7.3333rem; height: 3.8333rem; background: url(../images/i-school.png) no-repeat; background-size: 7.3333rem auto; overflow: hidden; }
+
+.sec-table .table-wrapper { position: relative; overflow-x: auto; }
+.sec-table .table-tit { height: 3rem; line-height: 3rem; font-size: 1.1667rem; color: #252525; text-align: center; overflow: hidden; }
+.sec-table th { width: 20%; }
