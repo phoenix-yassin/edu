@@ -357,7 +357,17 @@ table{
     }
     th,td{width:4rem; }      
     .w12{width:12rem}
-    .w6{width:5.5rem}
+    .w6{width:5.5rem};
+    .fixed-table{
+        table{
+            border-color: #fff;
+            margin-bottom: 0;
+            }
+        th{background: #000;border-color: #fff;}
+        color:#fff;
+        position: relative;
+         overflow-x: auto;       
+    }
     
 }
 .sec-hr{
@@ -374,3 +384,4 @@ table td:first-child{font-weight: normal !important;}
 .examples{
     p{line-height: 1.8;}
 }
+

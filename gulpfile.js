@@ -114,12 +114,19 @@ gulp.task('spritesmith',function(){
 });
 
 
+// 开发环境入口： 1.雪碧图制作 2.生成合并的css 3.检查js 4.watch
+gulp.task('minifyCss', function(){
+	  return gulp.src('./app/css/*.css')
+	  	.pipe(plumber())
+  //    .pipe(uglify())
+        .pipe(gulp.dest('./dist/css'));
+});
+
 
 // 开发环境入口： 1.雪碧图制作 2.生成合并的css 3.检查js 4.watch
 gulp.task('default', ['sass'], function(){
     console.log('basic tasks completed, now going to watch changes....');
     return gulp.run('watch');
-    
 });
 
 // 发布环境入口:移动所有文件到dist文件夹
@@ -130,7 +137,6 @@ gulp.task('dist', ['minifyCss', 'imagemin'], function(cb){
       .pipe(plumber())
   //    .pipe(uglify())
       .pipe(gulp.dest('./dist/js'));
-
 
     gulp.src('./app/fonts/*.*')
     .pipe(plumber())
