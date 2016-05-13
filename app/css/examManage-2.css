@@ -118,14 +118,9 @@ table:last-child { margin-bottom: 0; }
 .charts .charts-tit { padding-top: 0.3333rem; color: #252525; text-align: center; line-height: 1.4; }
 .charts .charts-main { padding: 1rem 0; border-bottom: 1px dashed #d7d7d7; }
 
-#charts-ans { width: 100%; height: 9.8333rem; }
+#charts-preparation, #charts-teaching-difficuty, #charts-teaching-idea { width: 100%; height: 16.6667rem; }
 
-#charts-desertion { width: 100%; height: 9.1667rem; }
-#charts-desertion .chart-item > span { font-size: 0.8333rem; }
-
-#charts-knowledge, #charts-preparation, #charts-teaching-difficuty, #charts-teaching-idea { width: 100%; height: 16.6667rem; }
-
-#charts-pic, #charts-homework, #charts-homework-score { width: 100%; height: 9.1667rem; }
+#charts-pic { width: 100%; height: 9.1667rem; }
 
 .chart-item { line-height: 2rem; font-size: 0.8333rem; color: #252525; }
 .chart-item .item-a { float: left; border-radius: 50%; width: 2rem; height: 2rem; vertical-align: bottom; transform: scale(0.6); }
@@ -159,6 +154,21 @@ table:last-child { margin-bottom: 0; }
 .sec-form .input-box { position: relative; }
 .sec-form .input-box .i-school { right: 0 !important; width: 7.3333rem; height: 3.8333rem; background: url(../images/i-school.png) no-repeat; background-size: 7.3333rem auto; overflow: hidden; }
 
-.sec-table .table-wrapper { position: relative; overflow-x: auto; }
+.sec-table .table-wrapper { position: relative; overflow-x: auto; padding-bottom: 1.6667rem; }
 .sec-table .table-tit { height: 3rem; line-height: 3rem; font-size: 1.1667rem; color: #252525; text-align: center; overflow: hidden; }
-.sec-table th { width: 20%; }
+.sec-table table { table-layout: fixed; position: relative; width: 100%; margin-bottom: 15px; overflow-x: auto; overflow-y: hidden; -ms-overflow-style: -ms-autohiding-scrollbar; -webkit-overflow-scrolling: touch; }
+.sec-table th, .sec-table td { width: 4rem; }
+.sec-table .w12 { width: 12rem; }
+.sec-table .w6 { width: 5.5rem; }
+
+.sec-hr { padding: 0 0.8333rem; border-bottom: 1px dashed #d7d7d7; height: 1px; }
+
+.pt20 { margin-top: 1.6667rem; }
+
+.table-mb-minus-2 { margin-bottom: -2px !important; }
+
+table .td-third { width: 33.3%; }
+
+table td:first-child { font-weight: normal !important; }
+
+.examples p { line-height: 1.8; }
