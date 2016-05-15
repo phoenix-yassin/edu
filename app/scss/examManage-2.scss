@@ -359,14 +359,21 @@ table{
     .w12{width:12rem}
     .w6{width:5.5rem};
     .fixed-table{
+        display: none;
+        position: fixed;
+        width:100%;
+        overflow-x: auto;
+        left:0;
+        top:0;
+        z-index: 999;
         table{
             border-color: #fff;
             margin-bottom: 0;
             }
         th{background: #000;border-color: #fff;}
         color:#fff;
-        position: relative;
-         overflow-x: auto;       
+        //  position: relative;
+        overflow-x: auto;       
     }
     
 }
@@ -385,3 +392,13 @@ table td:first-child{font-weight: normal !important;}
     p{line-height: 1.8;}
 }
 
+.i-share{
+    position:fixed;
+    top:70%;
+    right:(10rem/12);
+    z-index: 1000;
+    width:(36rem/12);
+    height:(36rem/12);
+    background: url(../images/i-share.png) no-repeat;
+    background-size:contain;
+}

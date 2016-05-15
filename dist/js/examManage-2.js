@@ -1,46 +1,7 @@
-/*$(function () {
-    $('#charts-1').highcharts({
-        title: false,
-        subtitle: false,
-        xAxis: {
-            categories: ['1', '2', '3', '4', '5', '6',
-                '7', '8', '9', '10', '11', '12']
-        },
-        yAxis: {
-            title: false,
-            plotLines: [{
-                value: 0,
-                width: 1,
-                color: '#808080'
-            }]
-        },
-        tooltip: {
-            valueSuffix: '°C'
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle',
-            borderWidth: 0
-        },
-        series: [{
-            name: 'Tokyo',
-            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-        }, {
-            name: 'London',
-            data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-        }]
-    });
-});*/
 /*echarts pic学生拍题*/
 var option_pic = {
-
-
     tooltip : {
-        trigger: 'axis'
-    },
-    legend: {
-        data:['邮件营销','联盟广告']
+        trigger: 'item'
     },
     grid: {
         left: '2%',
@@ -52,7 +13,7 @@ var option_pic = {
     xAxis : 
         {
             type : 'category',
-            boundaryGap : false,
+            boundaryGap : true,
             axisTick:{show:false},
             data : ['1','2','3','4','5','6','7','8','9','10','11','12'],
              splitLine:{ 
@@ -65,16 +26,14 @@ var option_pic = {
         },
      yAxis: {
         splitNumber:1,
-        axisTick:{show:false},
         type: 'value',
         show:true,
+        axisTick:{show:false},
         axisLine:{
             show:false,
-            
         }
     },
-    series : [
-        
+    series : [   
         {
             name:'直接访问',
             type:'line',
@@ -88,7 +47,6 @@ var option_pic = {
         {
             name:'搜索引擎',
             type:'line',
-            
             data:[82, 93, 90, 93, 19, 133, 12, 90, 93, 19, 133, 12],
             lineStyle:{
                 normal:{
@@ -250,5 +208,47 @@ var option_teaching_idea= {
 };
 var chart_teaching_idea= echarts.init(document.getElementById('charts-teaching-idea'));
 chart_teaching_idea.setOption(option_teaching_idea);
+
+$(function(){
+	// 表头是否显示
+	var isShow = false;
+	//表格顶部距离顶部距离　＋　表头高度
+	var v_min_len = $(".table-wrapper").offset().top +　($(".table-wrapper th").outerHeight())/2;
+	var v_max_len = $(".table-wrapper").offset().top +　$(".table-wrapper tbody").outerHeight() - 5;
+	
+/*垂直监听*/
+	 $(window).scroll(function () {
+	 	v_scroll = document.body.scrollTop
+            if(v_scroll > v_min_len && v_scroll < v_max_len){
+            	if(!isShow){
+            		/*$(".fixed-table").show(function(){
+            			isShow = true;
+            		});*/
+            		$(".fixed-table")[0].style.display = "block";
+            		isShow = true;
+            	}
+            }else{
+            	if(isShow){
+            		/*$(".fixed-table").hide(function(){
+	            			isShow = false;
+	            		});*/
+	            	$(".fixed-table")[0].style.display = "";
+            		isShow = false;
+            	}
+            }
+        });
+            /**/
+		$main_tab = $(".table-wrapper");
+		$fixed_tab = $(".fixed-table");
+		/*水平监听：主表带动表头*/
+	  $main_tab.scroll(function () {
+	           $fixed_tab.scrollLeft($main_tab.scrollLeft());
+	        });
+	    /*水平监听：表头带动主表*/
+	  $fixed_tab.scroll(function () {
+	           $main_tab.scrollLeft($fixed_tab.scrollLeft());
+	        });
+       
+});
 
 

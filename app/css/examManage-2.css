@@ -160,7 +160,7 @@ table:last-child { margin-bottom: 0; }
 .sec-table th, .sec-table td { width: 4rem; }
 .sec-table .w12 { width: 12rem; }
 .sec-table .w6 { width: 5.5rem; }
-.sec-table .fixed-table { color: #fff; position: relative; overflow-x: auto; }
+.sec-table .fixed-table { display: none; position: fixed; width: 100%; overflow-x: auto; left: 0; top: 0; z-index: 999; color: #fff; overflow-x: auto; }
 .sec-table .fixed-table table { border-color: #fff; margin-bottom: 0; }
 .sec-table .fixed-table th { background: #000; border-color: #fff; }
 
@@ -175,3 +175,5 @@ table .td-third { width: 33.3%; }
 table td:first-child { font-weight: normal !important; }
 
 .examples p { line-height: 1.8; }
+
+.i-share { position: fixed; top: 70%; right: 0.8333rem; z-index: 1000; width: 3rem; height: 3rem; background: url(../images/i-share.png) no-repeat; background-size: contain; }
