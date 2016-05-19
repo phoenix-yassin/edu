@@ -17,6 +17,8 @@ var notify = require('gulp-notify'),
 
    sass = require('gulp-ruby-sass'),
    minifyCss = require('gulp-minify-css'),
+   sourcemaps = require('gulp-sourcemaps'),
+   autoprefixer = require('gulp-autoprefixer'),
    //concat = require('gulp-concat'),
    //uglify = require('gulp-uglify'),
    rename = require('gulp-rename'),
@@ -47,6 +49,11 @@ gulp.task('sass', function() {
         .pipe(notify({ message: 'common css task is completed!' }));*/
    return sass('./app/scss/*.scss',{style:'compact',precision:4})
           .pipe(plumber())
+          .pipe(autoprefixer({
+            supports: false,
+            browsers: ['Android 2.3', 'Android >= 4', 'Chrome >= 20', 'Firefox >= 24', 'Explorer >= 10', 'iOS >= 6', 'Opera >= 12', 'Safari >= 6'],
+            cascade: false
+        }))
            //.on('error', sass.logError))
            .pipe(gulp.dest('./app/css'))
            .pipe(notify({ message: 'common css task is completed!' }));
